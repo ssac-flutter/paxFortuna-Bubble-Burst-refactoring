@@ -179,7 +179,7 @@ class _BurstScreenState extends State<BurstScreen>
     for (int x = 0; x < count; x++) {
       double randomX = random.nextDouble() * 7.0;
       // X position: 짝수이면 줄여야는데, 사방 터지지 않는 이슈 있음
-      if (x % 2 == 1) {
+      if (x % 2 == 0) {
         randomX += randomX;
       }
       // Y position
@@ -313,7 +313,7 @@ class _BurstScreenState extends State<BurstScreen>
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-         for (int i = 0; i < 4; i++) {
+         for (int i = 0; i < 6; i++) {
             burstParticles();
           }
         },
